@@ -1,0 +1,118 @@
+
+
+ * {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4203a9, #90bafc);
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.calculator h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.calculator h1 span {
+  color: #ffff76;
+}
+
+.inputbox {
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.inputbox input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 14px 20px;
+  border: 0;
+  outline: 0;
+  font-size: 18px;
+  border-radius: 5px;
+  position: relative;
+  background-color: #fff;
+  color: #333;
+}
+
+.inputbox button {
+  background: #ffff76;
+  border: 0;
+  outline: 0;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+}
+
+.inputbox input[type="date"] {
+  padding-right: 30px; /* Ensure enough space for the calendar icon */
+}
+
+.inputbox input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  right: 10px;
+  top: calc(50% - 10px); /* Center vertically */
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+#result {
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+#result span {
+  color: #ffff76;
+}
+
+@media (min-width: 600px) {
+  .calculator h1 {
+    font-size: 60px;
+  }
+
+  .inputbox {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .inputbox input {
+    flex: 1;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+
+  .inputbox input[type="date"] {
+    padding-right: 40px; /* Ensure enough space for the calendar icon */
+  }
+
+  .inputbox input[type="date"]::-webkit-calendar-picker-indicator {
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+  }
+}
+
